@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:delivery/login.dart';
 import 'package:flutter/material.dart';
+import 'package:delivery/homeRider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -260,10 +261,10 @@ class _registerRiderState extends State<registerRider> {
           padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
           child: ElevatedButton(
             onPressed: () {
-              //   Navigator.pushReplacement(
-              //  context,
-              //  MaterialPageRoute(builder: (context) => HomeUser()),
-              // );
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => HomeRider()),
+              );
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color.fromARGB(243, 239, 70, 24),
