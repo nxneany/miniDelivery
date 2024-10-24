@@ -3,6 +3,7 @@ import 'package:delivery/registerRider.dart';
 import 'package:delivery/registerUser.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:delivery/loginRider.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -19,6 +20,16 @@ class _LoginPageState extends State<LoginPage> {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) => const RegisterUser()),
+    );
+  }
+
+  // Function to navigate to the rider login screen
+  void loginRider() {
+    // TODO: Implement rider login logic
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+          builder: (context) => LoginRider()), // เปลี่ยนไปยังหน้าล็อกอินไรเดอร์
     );
   }
 
@@ -187,6 +198,36 @@ class _LoginPageState extends State<LoginPage> {
                           decoration: TextDecoration.underline,
                           decorationColor:
                               const Color.fromARGB(255, 254, 204, 40),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 2),
+              // Add buttons for Rider and User Login
+              Center(
+                child: Row(
+                  mainAxisSize:
+                      MainAxisSize.min, // ปรับให้ Row มีขนาดตามเนื้อหา
+                  children: [
+                    ElevatedButton(
+                      onPressed: loginRider,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(248, 239, 70, 24),
+                        padding: const EdgeInsets.symmetric(vertical: 16),
+                        minimumSize:
+                            const Size(120, 60), // กำหนดความกว้างของปุ่ม
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12),
+                        ),
+                      ),
+                      child: Text(
+                        "เข้าสู่ระบบไรเดอร์",
+                        style: GoogleFonts.kanit(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                     ),

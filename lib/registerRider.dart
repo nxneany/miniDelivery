@@ -263,7 +263,7 @@ class _registerRiderState extends State<registerRider> {
             onPressed: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => HomeRider()),
+                MaterialPageRoute(builder: (context) => LoginPage()),
               );
             },
             style: ElevatedButton.styleFrom(

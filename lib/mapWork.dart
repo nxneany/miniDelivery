@@ -45,8 +45,11 @@ class _MapworkState extends State<Mapwork> {
                 const Text('คุณต้องการถ่ายรูปหรือเลือกจากแกลเลอรีหรือไม่?'),
             actions: [
               TextButton(
-                onPressed: () => Navigator.pop(context),
-                child: const Text('ยกเลิก'),
+                onPressed: () async {
+                  Navigator.pop(context);
+                  await _pickImage(ImageSource.gallery);
+                },
+                child: const Text('เลือกจากแกลเลอรี'),
               ),
               TextButton(
                 onPressed: () async {
@@ -56,11 +59,8 @@ class _MapworkState extends State<Mapwork> {
                 child: const Text('ถ่ายรูป'),
               ),
               TextButton(
-                onPressed: () async {
-                  Navigator.pop(context);
-                  await _pickImage(ImageSource.gallery);
-                },
-                child: const Text('เลือกจากแกลเลอรี'),
+                onPressed: () => Navigator.pop(context),
+                child: const Text('ยกเลิก'),
               ),
             ],
           );
