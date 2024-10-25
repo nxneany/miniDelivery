@@ -1,9 +1,9 @@
 import 'package:delivery/homeUser.dart';
+import 'package:delivery/loginRider.dart';
 import 'package:delivery/registerRider.dart';
 import 'package:delivery/registerUser.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:delivery/loginRider.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -173,8 +173,7 @@ class _LoginPageState extends State<LoginPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) =>
-                                  const registerRider()), // Ensure this matches your class name
+                              builder: (context) => const registerRider()),
                         );
                       },
                       child: Text(
@@ -217,7 +216,7 @@ class _LoginPageState extends State<LoginPage> {
                         backgroundColor: const Color.fromARGB(248, 239, 70, 24),
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         minimumSize:
-                            const Size(120, 60), // กำหนดความกว้างของปุ่ม
+                            const Size(100, 30), // กำหนดความกว้างของปุ่ม
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
                         ),
@@ -225,7 +224,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Text(
                         "เข้าสู่ระบบไรเดอร์",
                         style: GoogleFonts.kanit(
-                          fontSize: 16,
+                          fontSize: 10,
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                         ),

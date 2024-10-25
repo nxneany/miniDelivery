@@ -1,8 +1,8 @@
 import 'dart:io';
-import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:image_picker/image_picker.dart';
+
 import 'package:delivery/homeRider.dart';
+import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class Mapwork extends StatefulWidget {
   const Mapwork({super.key});
@@ -12,17 +12,17 @@ class Mapwork extends StatefulWidget {
 }
 
 class _MapworkState extends State<Mapwork> {
-  late GoogleMapController mapController;
-  final LatLng _center = const LatLng(13.7563, 100.5018); // พิกัดกรุงเทพฯ
+  // late GoogleMapController mapController;
+  // final LatLng _center = const LatLng(13.7563, 100.5018); // พิกัดกรุงเทพฯ
   final ImagePicker _picker = ImagePicker();
   XFile? _image; // เก็บรูปที่ถ่าย
   int _updateCount = 0; // ตัวนับการอัปเดตสถานะ
 
   static const int _maxUpdates = 2; // กำหนดจำนวนการอัปเดตสูงสุด
 
-  void _onMapCreated(GoogleMapController controller) {
-    mapController = controller;
-  }
+  // void _onMapCreated(GoogleMapController controller) {
+  //   mapController = controller;
+  // }
 
   Future<void> _pickImage(ImageSource source) async {
     final pickedFile = await _picker.pickImage(source: source);
@@ -81,13 +81,13 @@ class _MapworkState extends State<Mapwork> {
       ),
       body: Stack(
         children: [
-          GoogleMap(
-            onMapCreated: _onMapCreated,
-            initialCameraPosition: CameraPosition(
-              target: _center,
-              zoom: 14.0,
-            ),
-          ),
+          // GoogleMap(
+          //   onMapCreated: _onMapCreated,
+          //   initialCameraPosition: CameraPosition(
+          //     target: _center,
+          //     zoom: 14.0,
+          //   ),
+          // ),
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(

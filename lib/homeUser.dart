@@ -1,5 +1,4 @@
 import 'package:delivery/deliParcel.dart'; // นำเข้าไฟล์สำหรับหน้าสินค้าที่นำส่ง
-import 'package:delivery/mapScreen.dart';
 import 'package:delivery/myParcel.dart';
 import 'package:delivery/parcelDetail.dart';
 import 'package:delivery/profileUser.dart'; // นำเข้าไฟล์สำหรับหน้าโปรไฟล์
@@ -16,12 +15,12 @@ class homeUser extends StatefulWidget {
 class _homeUserState extends State<homeUser> {
   // ฟังก์ชันเพื่อแสดงหน้าแผนที่
   void showMap() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-          builder: (context) =>
-              const MapScreen()), // เปลี่ยนไปยังหน้าของ MapScreen
-    );
+    // Navigator.push(
+    //   context,
+    //   MaterialPageRoute(
+    //       builder: (context) =>
+    //           const MapScreen()), // เปลี่ยนไปยังหน้าของ MapScreen
+    // );
   }
 
   @override

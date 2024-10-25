@@ -12,7 +12,10 @@ dependencies:
   cupertino_icons: ^1.0.6
   image_picker: ^0.8.7+4  # Keep only one version of image_picker
   permission_handler: ^10.2.0
-  google_maps_flutter: ^2.3.0  # อัปเดตให้ตรงกับเวอร์ชันล่าสุด
+
+  flutter_map: ^7.0.2
+  geolocator: ^12.0.0
+  geolocator_android: 4.5.5
 
 dev_dependencies:
   flutter_test:
@@ -26,6 +29,7 @@ flutter:
     - assets/image/logo2.png
     - assets/image/logo1.png
     - assets/image/profile.png
+    - assets/config/config.json
 
 
   # To add assets to your application, add an assets section, like this:

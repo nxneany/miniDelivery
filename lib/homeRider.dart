@@ -1,8 +1,7 @@
 import 'package:delivery/historyWork.dart';
+import 'package:delivery/profileRider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:delivery/detailWork.dart';
-import 'package:delivery/profileRider.dart';
 
 class HomeRider extends StatefulWidget {
   const HomeRider({super.key});
@@ -182,12 +181,12 @@ class _HomeRiderState extends State<HomeRider> {
                                 GestureDetector(
                                   onTap: () {
                                     // เปลี่ยนหน้าไปยัง detailWork
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              DetailWork()), // ตรวจสอบให้แน่ใจว่ามีการนำเข้า DetailWork
-                                    );
+                                    // Navigator.push(
+                                    //   context,
+                                    //   MaterialPageRoute(
+                                    //       builder: (context) =>
+                                    //           DetailWork()), // ตรวจสอบให้แน่ใจว่ามีการนำเข้า DetailWork
+                                    // );
                                   },
                                   child: const Icon(
                                     Icons.arrow_forward_ios,
